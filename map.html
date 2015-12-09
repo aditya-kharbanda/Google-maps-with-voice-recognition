@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
+<script src="http://maps.googleapis.com/maps/api/js">
+</script>
+<link rel="stylesheet" href="map.css">
+<script src="jquery-1.11.3.js"></script>
+<script src = "mymap.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
+</head>
+
+<body>
+    <header>
+       <form name="searchForm" class="formSearch">
+     
+         <div class="input_container">
+            <p  class="input_text">Enter name of the place and click the button</p>
+            <i class="fa fa-search" id="trigger"></i>
+            <input id="searchfield" type="text" size="50" name="search"/>
+         </div>
+       </form>
+    </header>
+
+   <div id="googleMap" style="width:100%;height:670px;"></div>
+
+ <script>
+ 
+  $(document).ready(function(){
+    	$(".input_container").click(function(){
+		$(".input_text").hide();
+		console.log("hi");
+	    });
+
+   map_obj.already();   //to set the default map
+  $("#trigger").click(function(){
+      map_obj.mapInit();
+      });
+  
+  if(annyang){
+  
+  var commands = {
+	'take me to *term' : map_obj.voiceURL       // "take me to " followed by place name
+   };
+
+   annyang.addCommands(commands);
+   annyang.start();
+   }
+
+
+  });
+
+  </script>
+ </body>
+</html>

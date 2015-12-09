@@ -1,0 +1,44 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+#searchBox
+{
+  	position:relative;
+}
+
+#trigger
+{
+	margin-left:97%;
+	
+margin-top: 3px;
+position: absolute;
+}
+
+.input_container
+{
+	position: relative;
+	width:35%;
+	margin: 0px auto;
+}
+.input_text
+{
+	position: absolute;
+top: -12px;
+left: 4px;
+color: grey;
+}
+
+#searchfield
+{
+	width:100%;
+}
+
+header
+{
+	z-index:10;
+	position:absolute;
+	width:100%;
+	top:16px;
+}
